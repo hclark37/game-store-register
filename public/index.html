@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Game Store Register</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<h1>Game Store Register</h1>
+		<p>Look up a customer, add games, and complete a sale.</p>
+
+		<section>
+			<h2>Customer</h2>
+			<label>
+				Phone Number
+				<input id="phone" inputmode="tel">
+			</label>
+			<button id="lookup">Look Up Customer</button>
+			<p id="customer-result">Guest checkout is ready.</p>
+
+			<details>
+				<summary>Register a Customer</summary>
+				<div class="form-row">
+					<input id="first" placeholder="First Name">
+					<input id="last" placeholder="Last Name">
+				</div>
+				<div class="form-row">
+					<input id="email" placeholder="Email">
+					<button id="register">Register Customer</button>
+				</div>
+			</details>
+		</section>
+
+		<section>
+			<h2>Games</h2>
+			<button id="refresh">Refresh Games</button>
+			<div class="table-wrap">
+				<table>
+					<thead>
+						<tr>
+							<th>Game ID</th>
+							<th>Game</th>
+							<th>Console</th>
+							<th>Price</th>
+							<th>Stock</th>
+						</tr>
+					</thead>
+					<tbody id="games"></tbody>
+				</table>
+			</div>
+		</section>
+
+		<section>
+			<h2>Current Sale</h2>
+			<div class="form-row">
+				<input id="game-id" type="number" min="1" placeholder="Game ID">
+				<input id="quantity" type="number" min="1" value="1" aria-label="Quantity">
+				<button id="add">Add Game</button>
+			</div>
+			<ul id="cart"></ul>
+			<button id="checkout">Complete Sale</button>
+		</section>
+
+		<section>
+			<h2>Purchase History</h2>
+			<button id="history">Show This Customer's Purchases</button>
+			<div id="history-result"></div>
+		</section>
+
+		<section>
+			<h2>Change a Game Price</h2>
+			<div class="form-row">
+				<input id="price-game-id" type="number" min="1" placeholder="Game ID">
+				<input id="new-price" type="number" min="0" step="0.01" placeholder="New Price">
+				<button id="save-price">Update Price</button>
+			</div>
+		</section>
+
+		<section>
+			<h2>Reports</h2>
+			<button id="sales-report">Sales Report</button>
+			<button id="stock-report">Low Stock Report</button>
+			<pre id="report-result"></pre>
+		</section>
+
+		<p id="message" role="status"></p>
+	</main>
+	<script src="app.js"></script>
+</body>
+</html>
