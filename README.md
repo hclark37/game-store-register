@@ -12,7 +12,7 @@ This application runs on SQLite with Node.js, Express, and better-sqlite3.
 1. Install Node.js 22 or newer.
 2. Open this folder in PowerShell.
 3. Run `npm install`; this installs the npm dependencies. 
-4. Run `npm run setup` to make the test database, running it again resets back to the test database. The database is a local file and requires no passwords or credentials to use. 
+4. Run `npm run setup` to make the test database, running it again resets back to the test database. The database is a local file and requires no passwords or credentials to use. This runs schema.sql then insert_data.sql in that order.
 5. Run `npm start`. This starts the web application.
 6. Open `http://localhost:3000` in your browser.
 7. Press Ctrl+C to stop the app.
